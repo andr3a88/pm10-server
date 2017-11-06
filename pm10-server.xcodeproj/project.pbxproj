@@ -612,6 +612,8 @@
 
 /* Begin PBXFileReference section */
 		6553CE571FAF4E110065D3AF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		65B0B88D1FB08368004FC16A /* Procfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Procfile; sourceTree = "<group>"; };
+		65B0B88E1FB08368004FC16A /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Kanna::Kanna::Product" /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -1575,6 +1577,8 @@
 			isa = PBXGroup;
 			children = (
 				6553CE571FAF4E110065D3AF /* README.md */,
+				65B0B88E1FB08368004FC16A /* .swift-version */,
+				65B0B88D1FB08368004FC16A /* Procfile */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_14 /* Tests */,
