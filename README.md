@@ -1,5 +1,8 @@
 # pm10-server
 
+swift package generate-xcodeproj
+swift build --configuration release
+./.build/release/pm10-server
 
 ### Deployment
 

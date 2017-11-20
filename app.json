@@ -1,0 +1,15 @@
+{
+    "name": "pm10 server",
+    "description": "An example application using Swift on Heroku.",
+    "repository": "https://github.com/andr3a88/pm10-server.git",
+    "website": "https://github.com/andr3a88/pm10-server",
+    "keywords": [
+        "swift",
+        "pm10"
+    ],
+    "buildpacks": [
+        {
+            "url": "https://github.com/kylef/heroku-buildpack-swift"
+        }
+    ]
+}
