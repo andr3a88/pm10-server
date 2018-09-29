@@ -3,7 +3,7 @@ import Vapor
 
 struct CityController: RouteCollection {
 
-    static let stubbedData: Bool = true
+    static let stubbedData: Bool = false
 
     func boot(router: Router) throws {
 

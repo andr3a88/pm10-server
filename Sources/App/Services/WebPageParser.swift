@@ -113,7 +113,7 @@ class WebPageParser {
             }
             if index > 0 && index < numberOfItemsForRow {
                 let timeInterval: TimeInterval = firstDayTimeInterval - Constants.HalfDayTimeInterval + Constants.DayTimeInterval*TimeInterval(index)
-                let level = Level(day: timeInterval, value: Int(value)!)
+                let level = Level(day: timeInterval, value: Int(value) ?? -1)
                 city.levels.append(level)
             }
             if index >= numberOfItemsForRow {
