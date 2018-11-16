@@ -1,16 +1,23 @@
+//
+//  AlexaController.swift
+//  App
+//
+//  Created by Andrea Stevanato on 16/11/2018.
+//
+
 import Vapor
 
-struct CityController: RouteCollection {
+struct AlexaController: RouteCollection {
 
     static let stubbedData: Bool = false
 
     func boot(router: Router) throws {
 
-        let cityRoutes = router.grouped("api", "pm10")
-        cityRoutes.get(use: getCityHandler)
+        let routes = router.grouped("api", "alexa")
+        routes.post(use: alexaWebhook)
     }
 
-    func getCityHandler(_ req: Request) throws -> Future<ItemsResponse<City>> {
+    func alexaWebhook(_ req: Request) throws -> Future<ItemsResponse<City>> {
         let parser = WebPageParser(url: Configuration.ArpavUrl)
 
         let promise = req.eventLoop.newPromise(ItemsResponse<City>.self)
@@ -23,6 +30,5 @@ struct CityController: RouteCollection {
         return promise.futureResult
     }
 }
-
 
 
