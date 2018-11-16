@@ -8,5 +8,8 @@ public func routes(_ router: Router) throws {
     }
 
     let cityController = CityController()
+    let alexaController = AlexaController()
+
     try router.register(collection: cityController)
+    try router.register(collection: alexaController)
 }
