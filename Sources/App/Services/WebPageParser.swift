@@ -55,6 +55,7 @@ class WebPageParser {
 
     func fetchCityPage() throws -> [City] {
         let url = URL(string: self.url)
+        print("\(url?.absoluteString)")
         let doc = try HTML(url: url!, encoding: .utf8)
         print("\(doc.text)")
         let content = doc.at_css("#boxcontenuti")
