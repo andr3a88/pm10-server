@@ -16,8 +16,10 @@ struct CityController: RouteCollection {
         let promise = req.eventLoop.newPromise(ItemsResponse<City>.self)
         do {
             let cities = CityController.stubbedData ? City.stubbed() : try parser.fetchCityPage()
+            print("\(cities.description)")
             promise.succeed(result: ItemsResponse(items: cities))
         } catch let error as WebPageParsingError {
+            print("\(error.debugDescription)")
             promise.fail(error: error)
         }
         return promise.futureResult

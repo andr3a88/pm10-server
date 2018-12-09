@@ -56,6 +56,7 @@ class WebPageParser {
     func fetchCityPage() throws -> [City] {
         let url = URL(string: self.url)
         let doc = try HTML(url: url!, encoding: .utf8)
+        print("\(doc.text)")
         let content = doc.at_css("#boxcontenuti")
         if let table = content?.css("table"), table.count > 1 {
             return self.parsePM10Table(table: table[1])
