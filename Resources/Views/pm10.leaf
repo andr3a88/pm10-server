@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h1>#(title)</h1>
+
+#for(city in cities) {
+    <table style="width:100%">
+    <tr>
+    <tr rowspan="7"><b>#(city.name)</b></tr>
+    #for(level in city.levels) {
+        #if(level.value == 0) {
+            <td bgcolor="green"><div>
+        } else if (level.value == 1) {
+            <td bgcolor="orange"><div>
+        } else {
+            <td bgcolor="red"><div>
+        }
+        <p>Giorno: #date(level.dayDate, "dd-MM-yyyy") - Livello: #(level.value)</p>
+        </div>
+        </td>
+    }
+    </tr>
+    </table>
+}
+
+</body>

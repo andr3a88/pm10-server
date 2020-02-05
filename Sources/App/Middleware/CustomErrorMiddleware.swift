@@ -75,7 +75,7 @@ final class CustomErrorMiddleware: Middleware, ServiceType {
             }
 
             // create a Response with appropriate status
-            let res = req.makeResponse(http: .init(status: status, headers: headers))
+            let res = req.response(http: .init(status: status, headers: headers))
 
             // attempt to serialize the error to json
             do {

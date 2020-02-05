@@ -55,9 +55,9 @@ class WebPageParser {
 
     func fetchCityPage() throws -> [City] {
         let url = URL(string: self.url)
-        print("\(url?.absoluteString)")
+        print("\(String(describing: url?.absoluteString))")
         let doc = try HTML(url: url!, encoding: .utf8)
-        print("\(doc.text)")
+        print("\(String(describing: doc.text))")
         let content = doc.at_css("#boxcontenuti")
         if let table = content?.css("table"), table.count > 1 {
             return self.parsePM10Table(table: table[1])
@@ -86,7 +86,7 @@ class WebPageParser {
             }
 
             // Parse the remaining rows
-            if index > 1 {
+            if index > 0 {
                 cities.append(self.parseCity(row: row, firstDayTimeInterval: firstDayTimeInterval))
             }
         }
